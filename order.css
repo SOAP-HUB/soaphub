@@ -1,0 +1,384 @@
+body{
+  background-image: url(OIG4.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  opacity: .9;
+}
+
+.upper{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: black;
+  color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 50px;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.sitename{
+  margin-left: 20px;
+  letter-spacing: 5px;
+  margin-top: 30px;
+  font-size: 30px;
+}
+.limited{
+  margin-left: 20px;
+  margin-top: 30px;
+  border-bottom: solid;
+  border-color: darkorange;
+  border-width: 1px;
+}
+.container{
+background-color: #fff;
+margin-bottom: 0;
+}
+.order{
+font-size: 30px;
+color: darkorange;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.info{
+  font-size: 15px;
+color: teal;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.form{
+  padding: 5px 10px;
+}
+.formdiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.information{
+  padding: 10px 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 90%;
+  border: solid;
+  border-width: 1px;
+  color: teal;
+}
+.information::placeholder{
+  color: teal;
+  font-style: italic;
+}
+.message{
+  width:300px;
+  padding-bottom: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: teal;
+  margin-bottom: 10px;
+}
+.submit{
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  background-color: teal;
+  border: solid;
+  border-color: teal;
+  border-style: dotted;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.submit:hover{
+  opacity: .8;
+}
+.bottom{
+  width: 100%;
+  background-color: darkorange;
+  margin-top: 0;
+}
+.bottom p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+@media only screen  and (min-width:768px) {
+  .upper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: black;
+    color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 80px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 80px;
+    margin-bottom: 70px;
+  }
+  .logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .sitename{
+    margin-left: 20px;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    font-size: 80px;
+  }
+  .limited{
+    margin-left: 20px;
+    margin-top: 30px;
+    border-bottom: solid;
+    border-color: darkorange;
+    border-width: 1px;
+    font-size: 50px;
+  }
+  .container{
+    width:100%;
+  background-color: #fff;
+  margin-bottom: 0;
+  }
+  .order{
+  font-size: 30px;
+  color: darkorange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  }
+  .info{
+    font-size: 15px;
+  color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  }
+  .form{
+    padding: 5px 10px;
+  }
+  .formdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .information{
+    padding: 20px 25 px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 80%;
+    border: solid;
+    border-width: 1px;
+    font-size: 25px;
+    color: teal;
+  }
+  .information::placeholder{
+    color: teal;
+    font-size:25px ;
+    font-style: italic;
+  }
+  .message{
+    width:473px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: teal;
+    margin-bottom: 10px;
+    border: solid;
+  }
+  .message::placeholder{
+    font-size:25px ;
+    font-style: italic;
+  }
+  .submit{
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    background-color: teal;
+    border: solid;
+    border-color: teal;
+    border-style: dotted;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .submit:hover{
+    opacity: .8;
+  }
+  .bottom{
+    width: 100%;
+    background-color: darkorange;
+    margin-top: 0;
+    height: 500px;
+  }
+  .bottom p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+  }
+}
+@media only screen  and (min-width:1000px){
+  .upper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: black;
+    color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 80px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 80px;
+    margin-bottom: 70px;
+  }
+  .logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .sitename{
+    margin-left: 20px;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    font-size: 80px;
+  }
+  .limited{
+    margin-left: 20px;
+    margin-top: 30px;
+    border-bottom: solid;
+    border-color: darkorange;
+    border-width: 1px;
+    font-size: 50px;
+  }
+  .container{
+  background-color: #fff;
+  margin-bottom: 0;
+  }
+  .order{
+  font-size: 30px;
+  color: darkorange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  }
+  .info{
+    font-size: 15px;
+  color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  }
+  .form{
+    padding: 5px 10px;
+  }
+  .formdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .information{
+    padding: 20px 25 px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width:80%;
+    border: solid;
+    border-width: 1px;
+    font-size: 25px;
+    color: teal;
+  }
+  .information::placeholder{
+    color: teal;
+    font-size:25px ;
+    font-style: italic;
+  }
+  .message{
+    width:473px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: teal;
+    margin-bottom: 10px;
+    border: solid;
+  }
+  .message::placeholder{
+    font-size:25px ;
+    font-style: italic;
+  }
+  .submit{
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    background-color: teal;
+    border: solid;
+    border-color: teal;
+    border-style: dotted;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .submit:hover{
+    opacity: .8;
+  }
+  .bottom{
+    width: 100%;
+    background-color: darkorange;
+    margin-top: 0;
+    height: 300px;
+  }
+  .bottom p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+  }
+}
