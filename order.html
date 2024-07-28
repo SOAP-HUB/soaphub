@@ -1,0 +1,438 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+ 
+<div class="container">
+  <div class="upper">
+    <div>
+      <img src="logo.jpeg" alt="logo" class="logo">
+    </div>
+    <div>
+      <span class="sitename">SOAPHUB</span>
+      <span class="limited">unlimitted</span>
+    </div>
+  </div> 
+  <p class="order">ORDER YOUR FAVORITE DETERGENTS</p>
+  <p class="info">Please fill in the information to place your order</p>
+
+  <form class="form" onsubmit="return false;">
+    <div class="formdiv">
+      <input id="name" placeholder="name" type="text" class="information">
+      <input id="contact" placeholder="contact" type="text" class="information">
+      <input id="items" placeholder="items" type="text" class="information">
+      <input id="block" placeholder="block/block B" type="text" class="information">
+      <input id="roomnumber" placeholder="room number" type="text" class="information">
+      <textarea id="message" class="message" placeholder="message (optional)"></textarea>
+    </div>
+    <button id="sendEmail" type="button" class="submit">Send via Email</button>
+    <button id="sendWhatsApp" type="button" class="submit">Send via WhatsApp</button>
+  </form>
+  <div class="bottom">
+    <p>It is always easy to buy from SOAPHUB</p>
+  </div>
+</div>
+
+<script>
+function getFormData() {
+  let name = document.getElementById('name').value.trim();
+  let contact = document.getElementById('contact').value.trim();
+  let items = document.getElementById('items').value.trim();
+  let block = document.getElementById('block').value.trim();
+  let room_number = document.getElementById('roomnumber').value.trim();
+  let message = document.getElementById('message').value.trim();
+
+  if (!name || !contact || !items || !block || !room_number) {
+    alert("Please fill in all the required fields.");
+    return null;
+  }
+
+  return {
+    name,
+    contact,
+    items,
+    block,
+    room_number,
+    message
+  };
+}
+
+function sendEmail() {
+  let data = getFormData();
+  if (!data) return;
+
+  let email = "soaphub14@gmail.com";
+  let subject = "Service Request Details";
+  let body = `
+  Customer Name: ${data.name}
+  Customer Contact: ${data.contact}
+  Customer Items: ${data.items}
+  Customer Block: ${data.block}
+  Customer Room Number: ${data.room_number}
+  Customer Message: ${data.message}
+  `;
+
+  let mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.open(mailtoLink, '_blank').focus();
+}
+
+function sendWhatsApp() {
+  let data = getFormData();
+  if (!data) return;
+
+  let message = `
+  Customer Name: ${data.name}
+  Customer Contact: ${data.contact}
+  Customer Items: ${data.items}
+  Customer Block: ${data.block}
+  Customer Room Number: ${data.room_number}
+  Customer Message: ${data.message}
+  `;
+
+  let whatsappLink = "https://wa.me/?text=" + encodeURIComponent(message);
+
+  window.open(whatsappLink, '_blank').focus();
+}
+
+document.getElementById('sendEmail').addEventListener('click', sendEmail);
+document.getElementById('sendWhatsApp').addEventListener('click', sendWhatsApp);
+</script>
+</body>
+</html>
+
+
+
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+ 
+<div class="container">
+  <div class="upper">
+    <div>
+      <img src="logo.jpeg" alt="logo" class="logo">
+    </div>
+    <div>
+      <span class="sitename">SOAPHUB</span>
+      <span class="limited">unlimitted</span>
+    </div>
+  </div> 
+  <p class="order">ORDER YOUR FAVORITE DETERGENTS</p>
+  <p class="info">Please fill in the information to place your order</p>
+
+  <form class="form" onsubmit="return false;">
+    <div class="formdiv">
+      <input id="name" placeholder="name" type="text" class="information">
+      <input id="contact" placeholder="contact" type="text" class="information">
+      <input id="items" placeholder="items" type="text" class="information">
+      <input id="block" placeholder="block/block B" type="text" class="information">
+      <input id="roomnumber" placeholder="room number" type="text" class="information">
+      <textarea id="message" class="message" placeholder="message (optional)"></textarea>
+    </div>
+    <button id="sendEmail" type="button" class="submit">Send via Email</button>
+    <button id="sendWhatsApp" type="button" class="submit">Send via WhatsApp</button>
+  </form>
+</div>
+<div class="bottom">
+  <p>It is always easy to buy from SOAPHUB</p>
+</div>
+<script>
+function getFormData() {
+  let name = document.getElementById('name').value.trim();
+  let contact = document.getElementById('contact').value.trim();
+  let items = document.getElementById('items').value.trim();
+  let block = document.getElementById('block').value.trim();
+  let room_number = document.getElementById('roomnumber').value.trim();
+  let message = document.getElementById('message').value.trim();
+
+  if (!name || !contact || !items || !block || !room_number) {
+    alert("Please fill in all the required fields.");
+    return null;
+  }
+
+  return {
+    name,
+    contact,
+    items,
+    block,
+    room_number,
+    message
+  };
+}
+
+function sendEmail() {
+  let data = getFormData();
+  if (!data) return;
+
+  let email = "soaphub14@gmail.com";
+  let subject = "Service Request Details";
+  let body = `
+  Customer Name: ${data.name}
+  Customer Contact: ${data.contact}
+  Customer Items: ${data.items}
+  Customer Block: ${data.block}
+  Customer Room Number: ${data.room_number}
+  Customer Message: ${data.message}
+  `;
+
+  let mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.open(mailtoLink, '_blank').focus();
+}
+
+function sendWhatsApp() {
+  let data = getFormData();
+  if (!data) return;
+
+  let message = `
+  Customer Name: ${data.name}
+  Customer Contact: ${data.contact}
+  Customer Items: ${data.items}
+  Customer Block: ${data.block}
+  Customer Room Number: ${data.room_number}
+  Customer Message: ${data.message}
+  `;
+
+  let whatsappLink = "https://wa.link/n36je0" + "?text=" + encodeURIComponent(message);
+
+  window.open(whatsappLink, '_blank').focus();
+}
+
+document.getElementById('sendEmail').addEventListener('click', sendEmail);
+document.getElementById('sendWhatsApp').addEventListener('click', sendWhatsApp);
+</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+ 
+<div class="container">
+  <div class="upper">
+    <div>
+      <img src="logo.jpeg" alt="logo" class="logo">
+    </div>
+    <div>
+      <span class="sitename">SOAPHUB</span>
+      <span class="limited">unlimitted</span>
+    </div>
+  </div> 
+  <p class="order">ORDER YOUR FAVORITE DETERGENTS</p>
+  <p class="info">Please fill in the information to place your order</p>
+
+  <form class="form" onsubmit="sendEmail(); return false;">
+    <div class="formdiv">
+      <input id="name" placeholder="name" type="text" class="information">
+      <input id="contact" placeholder="contact" type="text" class="information">
+      <input id="items" placeholder="items" type="text" class="information">
+      <input id="block" placeholder="block/block B" type="text" class="information">
+      <input id="roomnumber" placeholder="room number" type="text" class="information">
+      <textarea id="message" class="message" placeholder="message (optional)"></textarea>
+    </div>
+    <button id="order" type="submit" class="submit">Place Order</button>
+  </form>
+</div>
+<div class="bottom">
+  <p>It is always easy to buy from SOAPHUB</p>
+</div>
+<script>
+function sendEmail() {
+  let name = document.getElementById('name').value.trim();
+  let contact = document.getElementById('contact').value.trim();
+  let items = document.getElementById('items').value.trim();
+  let block = document.getElementById('block').value.trim();
+  let room_number = document.getElementById('roomnumber').value.trim();
+  let message = document.getElementById('message').value.trim();
+
+  if (!name || !contact || !items || !block || !room_number) {
+    alert("Please fill in all the required fields.");
+    return;
+  }
+
+  let email = "soaphub14@gmail.com";
+  let subject = "Service Request Details";
+  let body = `
+  Customer Name: ${name}
+  Customer Contact: ${contact}
+  Customer Items: ${items}
+  Customer Block: ${block}
+  Customer Room Number: ${room_number}
+  Customer Message: ${message}
+  `;
+
+  let mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.open(mailtoLink, '_blank').focus();
+}
+
+document.getElementById('order').addEventListener('click', sendEmail);
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+ 
+<div class="container">
+  <div class="upper">
+    <div>
+      <img src="logo.jpeg" alt="logo" class="logo">
+    </div>
+    <div>
+      <span class="sitename">SOAPHUB</span>
+      <span class="limited">unlimitted</span>
+    </div>
+  </div> 
+  <p class="order">ORDER YOUR FAVORITE DETERGENTS</p>
+  <p class="info">Please fill in the information to place your order</p>
+
+  <form class="form" onsubmit="sendEmail(); return false;">
+    <div class="formdiv">
+      <input id="name" placeholder="name" type="text" class="information" required>
+      <input id="contact" placeholder="contact" type="text" class="information" required>
+      <input id="items" placeholder="items" type="text" class="information" required>
+      <input id="block" placeholder="block/block B" type="text" class="information" required>
+      <input id="roomnumber" placeholder="room number" type="text" class="information" required>
+      <textarea id="message" class="message" placeholder="message (optional)"></textarea>
+    </div>
+    <button id="order" type="submit" class="submit">Place Order</button>
+  </form>
+</div>
+<div class="bottom">
+  <p>It is always easy to buy from SOAPHUB</p>
+</div>
+<script>
+function sendEmail() {
+  let name = document.getElementById('name').value;
+  let contact = document.getElementById('contact').value;
+  let items = document.getElementById('items').value;
+  let block = document.getElementById('block').value;
+  let room_number = document.getElementById('roomnumber').value;
+  let message = document.getElementById('message').value;
+
+  let email = "soaphub14@gmail.com";
+  let subject = "Service Request Details";
+  let body = `
+  Customer Name: ${name}
+  Customer Contact: ${contact}
+  Customer Items: ${items}
+  Customer Block: ${block}
+  Customer Room Number: ${room_number}
+  Customer Message: ${message}
+  `;
+
+  let mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.open(mailtoLink, '_blank').focus();
+}
+
+document.getElementById('order').addEventListener('click', sendEmail);
+</script>
+</body>
+</html>
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+ 
+<div class="container">
+  <div class="upper">
+    <div>
+      <img src="logo.jpeg" alt="" class="logo">
+    </div>
+    <div>
+      <span class="sitename">
+        SOAPHUB
+      </span>
+      <span class="limited">
+        unlimitted
+      </span>
+    </div>
+  </div> 
+  <p class="order">ORDER YOUR FAVERATE DITERGENTS</p>
+  <p class="info">Please fill in the informations to place your order</p>
+
+  <form class="form" onsubmit="whatsapp(); return false;" >
+    <div class="formdiv">
+      <input id="name"  placeholder="name" type="text" class="information">
+      <input id="contact" placeholder="contact" type="text" class="information">
+      <input id="items" placeholder="items" type="text" class="information">
+      <input id="block" placeholder="block/block B" type="text" class="information">
+      <input id="room-number" placeholder="room number" type="text" class="information">
+      <textarea itemid="message" class="message" placeholder="message (optional)" name="" id=""></textarea>
+    </div>
+    <button id="order" type="submit" class="submit">place order</button>
+  </form>
+</div>
+<div class="bottom">
+  <p>
+    It is alway easy to buy from SOAPHUB
+  </p>
+</div>
+<script>
+  
+function sendEmail() {
+  let name = document.getElementById('name').value;
+  let contact = document.getElementById('contact').value;
+  let items = document.getElementById('items').value;
+  let block = document.getElementById('block').value;
+  let room_number = document.getElementById('roomnumber').value;
+  let message = document.getElementById('message').value;
+
+  let email = "soaphub14@gmail.com";
+  let subject = "Service Request Details";
+  let body = 
+  `
+  Customer Name: ${name}
+  Customer Contact: ${contact}
+  Customer Items: ${items}
+  Customer Block: ${block}
+  Customer Room Number: ${room_number}
+  Customer Message: ${message}
+  `
+
+  let mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.open(mailtoLink, '_blank').focus();
+}
+
+const order = document.getElementById('order');
+order.addEventListener('click', sendEmail);
+</script>
+</body>
+</html> -->
