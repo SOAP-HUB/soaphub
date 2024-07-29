@@ -14,6 +14,7 @@ body{
         opacity: 1;
         scale: 1;
       }
+   }
 .upper{
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -212,6 +213,7 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
         opacity: 1;
         scale: 1;
       }
+   }
   .upper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -341,8 +343,8 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     display: grid;
     grid-template-columns: 1fr 1fr;
     animation: appear  linear;
-      animation-timeline: view();
-      animation-range: entry 0 cover 35%;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
@@ -420,6 +422,7 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
         opacity: 1;
         scale: 1;
       }
+     }
   .upper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -549,8 +552,8 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     display: grid;
     grid-template-columns: 1fr 1fr;
     animation: appear  linear;
-      animation-timeline: view();
-      animation-range: entry 0 cover 35%;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
