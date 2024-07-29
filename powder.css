@@ -36,7 +36,10 @@ body{
   right: 10%;
   width: 60px;
   height: 60px;
-  background-color: transparent;
+  background-color: white;
+  background-color: white;
+  border: solid;
+  border-color: darkorange;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -113,7 +116,7 @@ body{
 }
 .container{
   border: solid;
-  border-width: 5px;
+  border-width: 1px;
   border-color: teal;
   display: flex;
   flex-direction: column;
