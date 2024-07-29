@@ -111,7 +111,7 @@ body{
 }
 .container{
   border: solid;
-  border-width: 5px;
+  border-width: 1px;
   border-color: darkorange;
   display: flex;
   align-items: center;
@@ -157,14 +157,14 @@ body{
   text-align: center;
 }
 .lable{
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bolder;
   color: darkorange;
 }
 .size{
   margin-left: 10px;
   color:white;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: underline;
   font-weight: bolder;
   margin-left:10px;
