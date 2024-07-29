@@ -14,7 +14,7 @@ body{
         opacity: 1;
         scale: 1;
       }
-     {
+   }
 .upper{
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -212,6 +212,7 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
   text-decoration: underline;
 }
 @media only screen  and (min-width:768px){
+  
   .upper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,6 +226,16 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     height: 70px;
     padding-top: 40px;
   }
+     @keyframes appear{
+      from{
+        opacity: 0;
+        scale: 0.5;
+      }  
+      to{
+        opacity: 1;
+        scale: 1;
+      }
+   }
   .sitename{
     margin-left: 20px;
     letter-spacing: 5px;
@@ -345,6 +356,9 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
@@ -426,6 +440,16 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     height: 70px;
     padding-top: 40px;
   }
+     @keyframes appear{
+      from{
+        opacity: 0;
+        scale: 0.5;
+      }  
+      to{
+        opacity: 1;
+        scale: 1;
+      }
+   }
   .sitename{
     margin-left: 20px;
     letter-spacing: 5px;
@@ -543,6 +567,9 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
