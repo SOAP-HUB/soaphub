@@ -5,6 +5,18 @@ body{
   position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+  .counter{
+    background-color: black;
+    margin-bottom: 10px;
+    width: 25%;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .counter span{
+    color: darkorange;
+  }
   @keyframes appear{
     from{
       opacity: 0;
