@@ -345,6 +345,48 @@
       <div><span>SoapHub</span></div>
     </div>
   </div>
-  
+  <script>
+        // Function to get a unique identifier for the visitor
+    function getVisitorId() {
+      return localStorage.getItem('visitorId');
+    }
+
+    // Function to set a unique identifier for the visitor
+    function setVisitorId() {
+      const visitorId = 'visitor-' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('visitorId', visitorId);
+      return visitorId;
+    }
+
+    // Function to update the visit count
+    function updateVisitCount() {
+      let visitCount = localStorage.getItem('visitCount');
+      if (!visitCount) {
+        visitCount = 0;
+      } else {
+        visitCount = parseInt(visitCount, 10);
+      }
+
+      // Check if the visitor has already been counted
+      let visitorId = getVisitorId();
+      if (!visitorId) {
+        visitorId = setVisitorId();
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+      }
+
+      // Update the visit count display
+      document.getElementById('visit-count').textContent = visitCount;
+    }
+    function resetVisitCount() {
+      localStorage.removeItem('visitCount');
+      localStorage.removeItem('visitorId');
+      document.getElementById('visit-count').textContent = 0;
+    }
+    
+
+    // Call the updateVisitCount function when the page loads
+    updateVisitCount();
+  </script>
 </body>
 </html>
