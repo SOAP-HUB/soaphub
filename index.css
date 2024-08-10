@@ -25,6 +25,9 @@ body{
   .counter span{
     color: darkorange;
   }
+  .counter p{
+    margin-top: 0;
+  }
   #status {
     font-size: 24px;
     font-weight: bold;
