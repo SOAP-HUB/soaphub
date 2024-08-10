@@ -5,16 +5,6 @@ body{
   position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-   @keyframes appear{
-      from{
-        opacity: 0;
-        scale: 0.5;
-      }  
-      to{
-        opacity: 1;
-        scale: 1;
-      }
-   }
 .upper{
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -121,6 +111,10 @@ body{
   color: white;
   border-color: white;
 }
+.soap a{
+  text-decoration: none;
+  color: teal;
+}
 .type{
   display: flex;
   align-items: center;
@@ -133,7 +127,7 @@ body{
 }
 .container{
   border: solid;
-  border-width: 1px;
+  border-width: 5px;
   border-color: teal;
   display: flex;
   flex-direction: column;
@@ -143,9 +137,6 @@ body{
   margin-right: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
-  animation: appear  linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 35%;
 }
 .container:hover{
 box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
@@ -171,11 +162,11 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
   margin-right: 10px;
   line-height: 25px;
   color: rgb(7, 6, 6);
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
 }
 .lable{
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bolder;
   color: darkorange;
 }
@@ -212,7 +203,7 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
   text-decoration: underline;
 }
 @media only screen  and (min-width:768px){
-  
+
   .upper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -226,16 +217,6 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     height: 70px;
     padding-top: 40px;
   }
-     @keyframes appear{
-      from{
-        opacity: 0;
-        scale: 0.5;
-      }  
-      to{
-        opacity: 1;
-        scale: 1;
-      }
-   }
   .sitename{
     margin-left: 20px;
     letter-spacing: 5px;
@@ -356,9 +337,6 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
@@ -383,11 +361,11 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     margin-right: 10px;
     line-height: 25px;
     color: rgb(7, 6, 6);
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
   }
   .lable{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     color: darkorange;
   }
@@ -427,6 +405,7 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
 
 }
 @media only screen  and (min-width:1000px){
+  
   .upper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -440,16 +419,6 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     height: 70px;
     padding-top: 40px;
   }
-     @keyframes appear{
-      from{
-        opacity: 0;
-        scale: 0.5;
-      }  
-      to{
-        opacity: 1;
-        scale: 1;
-      }
-   }
   .sitename{
     margin-left: 20px;
     letter-spacing: 5px;
@@ -567,9 +536,6 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 35%;
   }
   .container:hover{
   box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
@@ -598,11 +564,11 @@ box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, .3);
     margin-right: 10px;
     line-height: 25px;
     color: rgb(7, 6, 6);
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
   }
   .lable{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     color: darkorange;
   }
