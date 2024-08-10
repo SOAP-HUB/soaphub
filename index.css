@@ -1,3 +1,5 @@
+
+
 body{
   background-color:rgb(4, 215, 201);
   margin: 0;
@@ -13,9 +15,27 @@ body{
     padding: 5px 10px;
     margin-left: 10px;
     border-bottom-right-radius: 10px;
+    height: 110px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    border-right: solid;
+    border-width: 5px;
+    border-color: darkorange;
   }
   .counter span{
     color: darkorange;
+  }
+  #status {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .open {
+    color: green;
+  }
+  
+  .close {
+    color: red;
   }
   @keyframes appear{
     from{
@@ -51,7 +71,7 @@ body{
   margin-left: 20px;
   letter-spacing: 5px;
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .limited{
   margin-left: 20px;
@@ -100,13 +120,14 @@ body{
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 999;
 }
 
-.home{
+.home-wa{
   width: 60px;
   height: 60px;
  }
- .home:hover{
+ .home-wa:hover{
   width:62px ;
   height: 62px;
  }
@@ -131,6 +152,10 @@ body{
   background-color: darkorange;
   color: white;
   border-color: white;
+}
+.soap a{
+  text-decoration: none;
+  color: teal;
 }
 .container{
   border: solid;
@@ -464,3 +489,4 @@ body{
   }
   
 }
+
