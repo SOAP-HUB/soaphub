@@ -127,7 +127,7 @@ body{
 }
 .container{
   border: solid;
-  border-width: 5px;
+  border-width: 1px;
   border-color: teal;
   display: flex;
   flex-direction: column;
